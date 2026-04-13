@@ -1,0 +1,98 @@
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 20px;
+}
+
+.select-button-premium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 16px 32px;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.1);
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.select-button-premium:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.select-button-premium:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  font-size: 1.3rem;
+}
+
+.file-name-display {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.hidden-input-actual {
+  display: none;
+}
+
+.upload-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Redesigned Primary Analyze Button --- */
+.analyze-btn-main {
+  background: var(--text-main);
+  color: white;
+  padding: 18px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.analyze-btn-main:hover:not(:disabled) {
+  background: #000;
+  transform: scale(1.01);
+}
+
+.analyze-btn-main:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* --- Layout Container Polish --- */
+.resume-tool-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.upload-section {
+  background: white;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}

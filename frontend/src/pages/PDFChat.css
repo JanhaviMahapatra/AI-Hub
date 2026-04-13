@@ -1,0 +1,196 @@
+/* PdfChat.css */
+
+:root {
+  --primary: #6366f1;
+  --bg-main: #fcfdfe;
+  --text-dark: #1e293b;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+  --shadow-main: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.pdf-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-main);
+  overflow: hidden;
+}
+
+/* --- Header & File Controls --- */
+.tool-header {
+  padding: 20px 30px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tool-header h2 {
+  font-size: 1.25rem;
+  margin-top: 5px;
+}
+
+.file-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.file-input-label {
+  padding: 8px 16px;
+  background: #f1f5f9;
+  border: 1px dashed var(--text-muted);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.2s;
+}
+
+.file-input-label:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.file-input-label input {
+  display: none;
+}
+
+.upload-btn {
+  background: var(--text-dark);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upload-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* --- Chat Window --- */
+.chat-window {
+  flex-grow: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 100px;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  max-width: 85%;
+  padding: 16px 20px;
+  border-radius: 16px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.bubble-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.user-query {
+  align-self: flex-end;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.user-query .bubble-label { color: var(--text-muted); }
+
+.ai-response {
+  align-self: flex-start;
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.2);
+}
+
+.ai-response .bubble-label { color: rgba(255, 255, 255, 0.8); }
+
+/* --- Footer Area --- */
+.query-footer {
+  padding: 25px 30px;
+  border-top: 1px solid var(--border);
+  background: white;
+}
+
+.query-wrapper {
+  display: flex;
+  gap: 15px;
+  background: #f8fafc;
+  padding: 8px 8px 8px 20px;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.query-wrapper:focus-within {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.query-wrapper input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+}
+
+.ask-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.animate-in {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
