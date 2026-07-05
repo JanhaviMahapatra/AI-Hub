@@ -1,0 +1,78 @@
+/* --- Core Element Structural Layout --- */
+.nexus-input-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Section Typography Headers --- */
+.nexus-input-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd; /* text-on-surface */
+    margin: 0;
+}
+
+/* --- Specialized Automation Info Callouts --- */
+.nexus-info-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(23, 31, 51, 0.4); /* surface-container base background */
+    border: 1px solid rgba(149, 142, 160, 0.2); /* outline-variant contextual border */
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.callout-info-icon {
+    font-size: 20px !important;
+    color: #d0bcff; /* primaryFixedDim highlight */
+}
+
+.callout-info-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #cbc3d7; /* on-surface-variant description color */
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* --- Styled Interactive Input Textarea --- */
+.nexus-interactive-textarea {
+    width: 100%;
+    background: rgba(11, 19, 38, 0.6); /* surface-container-lowest panel surface */
+    border: 1px solid rgba(149, 142, 160, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    color: #dae2fd;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    outline: none;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-interactive-textarea::placeholder {
+    color: rgba(203, 195, 215, 0.4);
+}
+
+/* State Interaction Glows */
+.nexus-interactive-textarea:focus {
+    border-color: #8B5CF6; /* Transitions straight into active primary violet outline */
+    background: rgba(11, 19, 38, 0.8);
+    box-shadow: 0 0 16px -4px rgba(139, 92, 246, 0.35);
+}
+
+/* --- Component Boundary Separation Dividers --- */
+.nexus-input-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.25); /* outline-variant separator layer */
+    margin: 40px 0;
+}

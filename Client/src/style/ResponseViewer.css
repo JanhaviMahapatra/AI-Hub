@@ -1,0 +1,229 @@
+/* --- Reusable Output Card Core Base Structure --- */
+.nexus-viewer-card {
+    margin-top: 35px;
+    background: rgba(30, 41, 59, 0.5); /* Unified high-fidelity glass-card look */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Diagnostic Header Modules --- */
+.nexus-viewer-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(149, 142, 160, 0.15);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.diagnostic-icon {
+    font-size: 24px !important;
+}
+.diagnostic-icon.text-teal { color: #44e2cd; }
+.diagnostic-icon.text-violet { color: #d0bcff; }
+
+.nexus-viewer-main-heading {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd; /* text-on-surface */
+    margin: 0;
+}
+
+/* --- Internal Core Layout Elements --- */
+.nexus-inner-content-block {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(149, 142, 160, 0.12);
+}
+
+.nexus-inner-subheading {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #dae2fd;
+    margin: 0 0 16px 0;
+}
+
+/* --- Standard & Structured List Frameworks --- */
+.nexus-viewer-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #cbc3d7; /* on-surface-variant text color */
+}
+
+.nexus-viewer-list li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.nexus-viewer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.nexus-viewer-list.font-sora-list li {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    color: #dae2fd;
+}
+
+/* --- Dynamic Quiz Layout Architecture --- */
+.nexus-quiz-item-block {
+    margin-bottom: 32px;
+}
+.nexus-quiz-item-block:last-child {
+    margin-bottom: 0;
+}
+
+.nexus-quiz-question-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #d0bcff; /* primaryfixed dim tint text */
+    margin: 0 0 8px 0;
+}
+
+.question-text-space {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.nexus-quiz-options-list {
+    margin: 0 0 16px 20px;
+    padding: 0;
+    color: #cbc3d7;
+}
+
+.nexus-quiz-options-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.nexus-quiz-answer-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(3, 198, 178, 0.1); /* Translucent verification block */
+    border: 1px solid rgba(68, 226, 205, 0.3);
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #44e2cd; /* secondary highlighting teal text color */
+    font-size: 14px;
+}
+
+.check-circle-icon {
+    font-size: 16px !important;
+}
+
+.nexus-quiz-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.15);
+    margin: 28px 0 0 0;
+}
+
+/* --- Grid Display Module For Flashcard Decks --- */
+.nexus-flashcards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* --- Explanatory System Blocks --- */
+.nexus-explain-section {
+    margin-bottom: 28px;
+}
+
+/* --- Translucent Unified Context Callout Panels --- */
+.nexus-callout-panel {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.callout-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.callout-icon {
+    font-size: 18px !important;
+}
+
+/* Neutral/Example Slate Theme Variation */
+.nexus-callout-panel.panel-neutral {
+    background: rgba(11, 19, 38, 0.4); /* surface-container-lowest panel equivalent background */
+    border: 1px solid rgba(73, 68, 84, 0.25);
+}
+.panel-neutral .callout-heading {
+    color: #dae2fd;
+}
+
+/* Info/Tips Cyan Theme Variation */
+.nexus-callout-panel.panel-info {
+    background: rgba(3, 198, 178, 0.06);
+    border: 1px solid rgba(68, 226, 205, 0.25);
+}
+.panel-info .callout-heading {
+    color: #44e2cd;
+}
+
+/* --- Global Elements Markdown Rules Overrides --- */
+.nexus-markdown-body {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #dae2fd;
+}
+
+.nexus-markdown-body.markdown-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #dae2fd;
+}
+
+.nexus-markdown-body p {
+    margin: 0 0 12px 0;
+}
+.nexus-markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+.nexus-markdown-body code {
+    font-family: 'JetBrains Mono', monospace;
+    background: #060e20;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid rgba(149, 142, 160, 0.15);
+    color: #3cddc7;
+}
+
+/* --- Raw View JSON Fallback Block --- */
+.nexus-raw-json-block {
+    background: #060e20;
+    border: 1px solid rgba(149, 142, 160, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    color: #3cddc7;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    margin: 0;
+}

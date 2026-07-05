@@ -1,0 +1,45 @@
+.nexus-chat-layout-container {
+    display: flex;
+    height: calc(100vh - 80px); 
+    margin-top: 80px;
+    background-color: #0b1326; 
+    color: #dae2fd; 
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.nexus-chat-main-stream {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(23, 31, 51, 0.4); 
+    border-left: 1px solid rgba(73, 68, 84, 0.3); 
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.nexus-chat-sidebar-wrapper {
+    width: 320px; 
+    min-width: 280px;
+    max-width: 400px;
+    background: rgba(19, 27, 46, 0.8); 
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nexus-chat-window-viewport {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+.nexus-chat-input-bar-anchor {
+    padding: 16px 24px; 
+    background: rgba(11, 19, 38, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(73, 68, 84, 0.3);
+}

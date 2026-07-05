@@ -1,0 +1,265 @@
+/* --- Document Framework Wrapper --- */
+.nexus-autofill-wrapper {
+    max-width: 1000px;
+    margin: 100px auto 40px auto; /* Offsets sticky navbar layout safely */
+    padding: 0 24px;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.nexus-page-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 32px 0;
+    background: linear-gradient(to right, #dae2fd, #cbc3d7);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* --- Premium File Upload Deck Zone --- */
+.nexus-upload-zone {
+    background: rgba(23, 31, 51, 0.4); /* surface-container base background */
+    border: 2px dashed rgba(149, 142, 160, 0.4); /* outline-variant dashed frame */
+    border-radius: 16px;
+    padding: 40px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.nexus-upload-zone:hover {
+    border-color: #44e2cd; /* secondary highlighting color frame shifts */
+    background: rgba(23, 31, 51, 0.6);
+}
+
+.upload-icon {
+    font-size: 40px !important;
+    color: #44e2cd; /* secondary accent tint */
+}
+
+.nexus-file-label-btn {
+    background: #2d3449; /* surface-variant */
+    color: #dae2fd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nexus-file-label-btn:hover {
+    background: #31394d;
+}
+
+.nexus-hidden-file-input {
+    display: none; /* Safely unbind default ugly browser element file layouts */
+}
+
+.upload-zone-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(203, 195, 215, 0.5);
+    margin: 0;
+}
+
+/* --- Selected State File Badge --- */
+.nexus-selected-file-badge {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(68, 226, 205, 0.1); /* transparent secondary contextual block background */
+    border: 1px solid rgba(68, 226, 205, 0.3);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #44e2cd;
+    font-size: 14px;
+}
+
+.file-status-icon {
+    font-size: 18px !important;
+}
+
+.file-name-text strong {
+    color: #dae2fd; /* highlights the custom internal file string filename */
+}
+
+/* --- Processing Action Controls --- */
+.nexus-extract-btn {
+    display: block;
+    margin-top: 24px;
+    background: #a078ff; /* primary-container text theme background color */
+    color: #23005c;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-extract-btn:hover:not(:disabled) {
+    opacity: 0.95;
+    box-shadow: 0 6px 20px -6px rgba(160, 120, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.nexus-extract-btn:disabled {
+    background: #2d3449;
+    color: rgba(218, 226, 253, 0.3);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Data Diagnostic Extracted Card Panel --- */
+.nexus-extracted-results-card {
+    margin-top: 40px;
+    background: rgba(30, 41, 59, 0.5); /* glass-card styling layout footprint */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.nexus-card-header-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(149, 142, 160, 0.15);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.diagnostic-icon {
+    font-size: 24px !important;
+    color: #d0bcff; /* primary accent status */
+}
+
+.nexus-results-main-heading {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd;
+    margin: 0;
+}
+
+/* --- Adaptive Grid Key-Value Fields Elements --- */
+.nexus-info-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.nexus-info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(11, 19, 38, 0.3);
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(73, 68, 84, 0.15);
+}
+
+.field-meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: #cbc3d7;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.field-value-text {
+    font-size: 15px;
+    color: #dae2fd;
+    font-weight: 500;
+}
+
+/* --- Split Large Text Blocks Sections --- */
+.nexus-split-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.nexus-block-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.nexus-inner-heading {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #dae2fd;
+    margin: 0 0 12px 0;
+}
+
+.nexus-inner-heading.text-teal { color: #44e2cd; }
+.nexus-inner-heading.text-violet { color: #d0bcff; }
+
+.block-text-content {
+    background: rgba(11, 19, 38, 0.3);
+    border: 1px solid rgba(73, 68, 84, 0.15);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cbc3d7;
+}
+
+/* --- Internal Nested Metrics Data Lists Grid Blocks --- */
+.nexus-array-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.nexus-array-box {
+    background: rgba(11, 19, 38, 0.4);
+    border: 1px solid rgba(73, 68, 84, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.empty-array-text {
+    font-size: 14px;
+    color: rgba(203, 195, 215, 0.5);
+    margin: 0;
+}
+
+.nexus-data-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #cbc3d7;
+}
+
+.nexus-data-list li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.nexus-data-list li:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,103 @@
+.form-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.nexus-glass-form {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+
+.form-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    text-align: center;
+    background: linear-gradient(to right, #44e2cd, #d0bcff);
+    
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;   
+    background-clip: text;        
+    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.form-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #cbc3d7; /
+    margin: 0 0 32px 0;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.nexus-input {
+    width: 100%;
+    background: rgba(11, 19, 38, 0.5); 
+    border: 1px solid rgba(149, 142, 160, 0.3); 
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: #dae2fd;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.nexus-input::placeholder {
+    color: rgba(203, 195, 215, 0.4);
+}
+
+.nexus-input:focus {
+    border-color: #8B5CF6;
+    background: rgba(11, 19, 38, 0.8);
+    box-shadow: 0 0 15px -3px rgba(139, 92, 246, 0.4);
+}
+
+.nexus-submit-btn {
+    width: 100%;
+    background: #a078ff; 
+    color: #23005c; 
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 12px;
+}
+
+.nexus-submit-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 8px 20px -6px rgba(160, 120, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.nexus-submit-btn:active {
+    transform: translateY(1px);
+    scale: 0.98;
+}

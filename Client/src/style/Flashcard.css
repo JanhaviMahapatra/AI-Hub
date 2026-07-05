@@ -1,0 +1,160 @@
+/* --- Core Flashcard Layout Block --- */
+.nexus-flashcard {
+    background: rgba(30, 41, 59, 0.6); /* High-fidelity glass-card foundation layer */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nexus-flashcard:hover {
+    transform: translateY(-2px);
+    border-color: rgba(149, 142, 160, 0.4); /* outline-variant contextual highlight tracking */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Flipped / Active State Variations */
+.nexus-flashcard.is-flipped {
+    border-color: #8B5CF6; /* Transforms to theme primary violet highlight accent */
+    background: rgba(139, 92, 246, 0.05); /* Soft premium container blending layer */
+    box-shadow: 0 12px 30px -10px rgba(139, 92, 246, 0.25);
+}
+
+/* --- Component Navigation Header Block --- */
+.nexus-flashcard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.nexus-flashcard-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #cbc3d7; /* on-surface-variant labeling */
+    margin: 0;
+}
+
+.is-flipped .nexus-flashcard-title {
+    color: #d0bcff; /* primary fixed dim color */
+}
+
+.state-icon {
+    font-size: 18px !important;
+    color: rgba(203, 195, 215, 0.4);
+    transition: color 0.2s ease;
+}
+
+.nexus-flashcard:hover .state-icon {
+    color: #dae2fd;
+}
+
+/* --- Sectioning Labels & Context Tags --- */
+.nexus-flashcard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nexus-meta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.tag-question {
+    background: rgba(218, 226, 253, 0.1);
+    color: #cbc3d7;
+}
+
+.tag-answer {
+    background: rgba(68, 226, 205, 0.15); /* secondary container transparent */
+    color: #44e2cd; /* secondary bright accent */
+}
+
+/* --- Inline Static Separation Bars --- */
+.nexus-flashcard-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.2); /* outline-variant horizontal trace */
+    margin: 20px 0;
+}
+
+/* --- Unrevealed Reveal Call-to-Actions Prompt --- */
+.nexus-flashcard-reveal-prompt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    color: rgba(203, 195, 215, 0.5);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    transition: color 0.2s ease;
+}
+
+.nexus-flashcard:hover .nexus-flashcard-reveal-prompt {
+    color: #3cddc7; /* highlights secondary fixed dim teal on mouse trace */
+}
+
+.interact-icon {
+    font-size: 16px !important;
+}
+
+/* --- Textual Markdown Context Formatting Rules --- */
+.nexus-markdown-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #dae2fd; /* text-on-surface */
+}
+
+.nexus-markdown-body.text-secondary-dim {
+    color: #cbc3d7; /* slightly soft secondary contrast block color layout text */
+}
+
+/* Nested element clean formatting specifications */
+.nexus-markdown-body p {
+    margin: 0;
+}
+
+.nexus-markdown-body code {
+    font-family: 'JetBrains Mono', monospace;
+    background: #060e20; /* surface-container-lowest panel trace */
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid rgba(149, 142, 160, 0.15);
+    color: #3cddc7;
+}
+
+/* --- Fade In Reveal Animation Core Matrix --- */
+.answer-animation {
+    animation: nexusFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes nexusFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

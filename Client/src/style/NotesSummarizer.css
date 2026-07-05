@@ -1,0 +1,311 @@
+/* --- Main Structural Core Layout Frame --- */
+.nexus-summarizer-layout {
+    max-width: 1000px;
+    margin: 80px auto 40px auto; /* Offsets sticky platform navbar height exactly */
+    padding: 48px 24px;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Ambient Backdrop Glow Spheres --- */
+.nexus-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.nexus-glow-left {
+    top: 60px;
+    left: -100px;
+    width: 384px;
+    height: 384px;
+    background: rgba(208, 188, 255, 0.07); /* Primary tint highlight overlay */
+    filter: blur(120px);
+}
+
+.nexus-glow-right {
+    bottom: 120px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(62, 250, 227, 0.04); /* Secondary bright teal overlay */
+    filter: blur(150px);
+}
+
+/* --- Typography Section Headers --- */
+.nexus-summarizer-header {
+    margin-bottom: 36px;
+}
+
+.nexus-page-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    background: linear-gradient(to right, #dae2fd, #cbc3d7);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.nexus-page-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    color: #cbc3d7; /* on-surface-variant subtle description link */
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* --- Premium File Upload Deck Zone --- */
+.nexus-upload-deck {
+    background: rgba(23, 31, 51, 0.4); /* surface-container base layer background */
+    border: 2px dashed rgba(149, 142, 160, 0.35); /* outline-variant code layout rules */
+    border-radius: 14px;
+    padding: 36px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.nexus-upload-deck:hover {
+    border-color: #44e2cd; /* secondary accent highlight color */
+    background: rgba(23, 31, 51, 0.6);
+}
+
+.upload-deck-icon {
+    font-size: 36px !important;
+    color: #44e2cd; /* secondary identity signature tint */
+}
+
+.nexus-upload-deck-label {
+    background: #2d3449; /* surface-variant background properties */
+    color: #dae2fd;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nexus-upload-deck-label:hover {
+    background: #31394d;
+}
+
+.nexus-hidden-file-element {
+    display: none; /* Masks default native operating system picker wrappers safely */
+}
+
+.upload-deck-subtext {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(203, 195, 215, 0.45);
+    margin: 0;
+}
+
+/* --- Status File Tracking Badge Module --- */
+.nexus-file-status-tag {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    background: rgba(139, 92, 246, 0.1); /* transparent primary-container layer context */
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: #d0bcff; /* primary-fixed-dim highlight */
+    font-size: 14px;
+}
+
+.file-tag-icon {
+    font-size: 18px !important;
+}
+
+.file-tag-text strong {
+    color: #dae2fd;
+}
+
+/* --- Core Pipeline Submission Actions Button --- */
+.nexus-summarize-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    background: #a078ff; /* primary-container background accent color */
+    color: #23005c; /* on-primary deep contrast typography */
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-summarize-submit-btn:hover:not(:disabled) {
+    opacity: 0.95;
+    box-shadow: 0 4px 16px -4px rgba(160, 120, 255, 0.45);
+    transform: translateY(-1px);
+}
+
+.nexus-summarize-submit-btn:disabled {
+    background: #2d3449;
+    color: rgba(218, 226, 253, 0.3);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Generated Analytics Briefing Results Port Block --- */
+.nexus-summary-results-viewport {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Responsive side-by-side content column distribution */
+.nexus-summary-split-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.nexus-summary-block-card {
+    background: rgba(30, 41, 59, 0.5); /* Unified platform glass-card signature */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 16px;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+.nexus-metrics-box {
+    background: rgba(23, 31, 51, 0.3); /* surface-container base card backdrop layer */
+    border: 1px solid rgba(73, 68, 84, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.nexus-action-items-footer-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+/* --- Internal Core Text Fields Typography Elements --- */
+.nexus-results-heading {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #dae2fd;
+    margin: 0 0 16px 0;
+}
+
+.nexus-results-heading.text-teal { color: #44e2cd; }
+.nexus-results-heading.text-violet { color: #d0bcff; }
+
+.empty-action-items-text {
+    font-size: 14px;
+    color: rgba(203, 195, 215, 0.5);
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Standard & Custom List Formats Specifications --- */
+.nexus-analytics-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #cbc3d7;
+}
+
+.nexus-analytics-list li {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+}
+
+.nexus-analytics-list li:last-child {
+    margin-bottom: 0;
+}
+
+.nexus-analytics-list.font-sora-items li {
+    font-family: 'Sora', sans-serif;
+    color: #dae2fd;
+    font-weight: 500;
+}
+
+/* Advanced visual custom bullet layout styling for Action Items block lists mapping */
+.nexus-analytics-list.dynamic-checkbox-style {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nexus-analytics-list.dynamic-checkbox-style li {
+    position: relative;
+    padding-left: 28px;
+}
+
+.nexus-analytics-list.dynamic-checkbox-style li::before {
+    content: '\e83a'; 
+    font-family: 'Material Symbols Outlined';
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-size: 18px;
+    color: #44e2cd;
+}
+
+/* --- Markdown Rendering Blocks Interoperability Settings --- */
+.nexus-markdown-body {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #dae2fd;
+}
+
+.nexus-markdown-body p {
+    margin: 0 0 12px 0;
+}
+.nexus-markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+.nexus-markdown-body code {
+    font-family: 'JetBrains Mono', monospace;
+    background: #060e20;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid rgba(149, 142, 160, 0.15);
+    color: #3cddc7;
+}
+
+/* --- Micro-animation Vector Layouts --- */
+.spin-icon {
+    animation: nexusNotesSpin 1.5s linear infinite;
+    font-size: 16px !important;
+}
+
+@keyframes nexusNotesSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,81 @@
+/* --- Mode Layout Structure --- */
+.nexus-mode-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+/* --- Section Typography Headers --- */
+.nexus-mode-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd; /* text-on-surface */
+    margin: 0;
+}
+
+/* --- Form Picker Dropdown Core Elements --- */
+.nexus-select-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nexus-mode-select {
+    width: 100%;
+    background: #171f33; /* surface-container base layer background */
+    border: 1px solid rgba(149, 142, 160, 0.3); /* outline opacity standard bounds */
+    border-radius: 8px;
+    padding: 14px 44px 14px 16px; /* Extra right padding protects from icon overlapping text */
+    color: #dae2fd;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    appearance: none; /* Unbind default generic OS browser wrapper designs safely */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+/* Custom Dropdown Option Dropdowns Popovers Colors */
+.nexus-mode-select option {
+    background: #171f33; 
+    color: #dae2fd;
+    padding: 12px;
+}
+
+/* Picker Active Interaction Highlights */
+.nexus-mode-select:focus {
+    border-color: #44e2cd; /* secondary highlighting teal framework */
+    background: #1d263b;
+    box-shadow: 0 0 12px -3px rgba(68, 226, 205, 0.3);
+}
+
+/* Custom Minimal Dropdown Arrow Target */
+.select-arrow-icon {
+    position: absolute;
+    right: 16px;
+    color: #cbc3d7; /* on-surface-variant label tint */
+    font-size: 18px !important;
+    pointer-events: none; /* Passes user mouse clicks directly to underlying selection deck */
+    opacity: 0.7;
+    transition: color 0.2s ease;
+}
+
+.nexus-mode-select:focus + .select-arrow-icon {
+    color: #44e2cd;
+    opacity: 1;
+}
+
+/* --- Spatial Break Traces --- */
+.nexus-mode-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.25); /* outline-variant contextual bounds separator */
+    margin: 40px 0;
+}

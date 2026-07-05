@@ -1,0 +1,86 @@
+/* --- Tool Card Base Structure --- */
+.nexus-tool-card {
+    background: rgba(30, 41, 59, 0.6); /* High-fidelity dark glassmorphic blend layer */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5); /* Crisp outline bounding context */
+    border-radius: 12px;
+    padding: 24px; /* Balanced inner spatial ratio */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px; /* Uniform grid card metrics footprint stability */
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+/* --- Atmospheric Dynamic Hover Execution --- */
+.nexus-tool-card:hover {
+    transform: translateY(-8px); /* Elevates block over active surface grids */
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.35); /* Soft premium violet accent shadow */
+    border-color: #8B5CF6; /* Shifts border profile directly to your primary palette accent color */
+}
+
+/* --- Layout Typography Definitions --- */
+.nexus-card-meta {
+    flex: 1;
+}
+
+.nexus-card-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #dae2fd; /* Clear text-on-surface readability */
+    margin: 0 0 10px 0;
+}
+
+.nexus-card-desc {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #cbc3d7; /* Soft mid-contrast layout text color */
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* --- Launch Control Strip Section --- */
+.nexus-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.nexus-card-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #2d3449; /* surface-variant subtle shade frame */
+    color: #dae2fd;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Shift action button parameters contextually whenever the main card anchor is targeted */
+.nexus-tool-card:hover .nexus-card-action-btn {
+    background: #d0bcff; /* Transitions straight into active primary layout token background color */
+    color: #3c0091; /* on-primary deep contrast core match value */
+}
+
+.action-arrow {
+    font-size: 16px !important;
+    transition: transform 0.2s ease;
+}
+
+.nexus-tool-card:hover .action-arrow {
+    transform: translateX(2px); /* Kinetic forward movement hint on element targeting */
+}
+

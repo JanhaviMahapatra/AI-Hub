@@ -1,0 +1,13 @@
+{
+  "name": "ai-hub",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd Server && npm run dev",
+    "ai": "cd ai-service && venv\\Scripts\\python.exe -m uvicorn main:app --reload",
+    "dev": "concurrently -n CLIENT,SERVER,AI -c blue,green,magenta \"npm run client\" \"npm run server\" \"npm run ai\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

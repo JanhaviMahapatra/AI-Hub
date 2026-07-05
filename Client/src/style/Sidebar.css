@@ -1,0 +1,162 @@
+/* --- Sidebar Main Structural Layout --- */
+.nexus-sidebar-container {
+    width: 280px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    background: #131b2e; /* surface-container-low */
+    border-right: 1px solid rgba(73, 64, 84, 0.25); /* outline-variant separator */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Header & Action Action Blocks --- */
+.nexus-sidebar-header {
+    padding: 20px 16px;
+    border-bottom: 1px solid rgba(73, 64, 84, 0.2);
+}
+
+.nexus-new-chat-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(139, 92, 246, 0.15); /* Soft transparent primary tint */
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    padding: 11px;
+    color: #d0bcff; /* primary-fixed-dim tint */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nexus-new-chat-btn:hover {
+    background: #a078ff; /* transition into primary-container */
+    color: #23005c; /* on-primary deep font color matching */
+    box-shadow: 0 4px 15px -4px rgba(160, 120, 255, 0.3);
+}
+
+.nexus-new-chat-btn .btn-icon {
+    font-size: 18px !important;
+}
+
+/* --- Conversations History Feed Container --- */
+.nexus-sidebar-list-viewport {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px 8px;
+}
+
+/* Minimalist scroll tracks inside sidebar layer */
+.nexus-sidebar-list-viewport::-webkit-scrollbar {
+    width: 4px;
+}
+.nexus-sidebar-list-viewport::-webkit-scrollbar-thumb {
+    background: rgba(149, 142, 160, 0.15);
+    border-radius: 99px;
+}
+
+.nexus-sidebar-empty-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: #cbc3d7;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* --- Conversation Single Row Flex Item --- */
+.nexus-sidebar-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* Row states */
+.nexus-sidebar-item:hover {
+    background: rgba(45, 52, 73, 0.4); /* surface-variant subtle glow */
+}
+
+.nexus-sidebar-item.active-chat-item {
+    background: rgba(23, 31, 51, 0.85); /* surface-container highlight state */
+    border-left: 3px solid #44e2cd; /* crisp visual accent indicator matching active links */
+    padding-left: 9px; /* adjusts padding dynamically to account for border geometry */
+}
+
+/* Internal Row Elements */
+.nexus-sidebar-item-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #dae2fd; /* text-on-surface */
+    font-weight: 500;
+}
+
+.active-chat-item .nexus-sidebar-item-title {
+    color: #44e2cd; /* transitions text to secondary asset shade when targeted */
+    font-weight: 600;
+}
+
+.item-chat-icon {
+    font-size: 16px !important;
+    color: #cbc3d7;
+    opacity: 0.6;
+}
+
+.active-chat-item .item-chat-icon {
+    color: #44e2cd;
+    opacity: 1;
+}
+
+.title-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* --- Inline Sidebar Delete Actions --- */
+.nexus-sidebar-delete-btn {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #cbc3d7;
+    opacity: 0; /* Hides trashcan until wrapper block context hover trigger occurs */
+    transition: all 0.2s ease;
+}
+
+/* Reveal trash can safely on desk hover bounds tracking */
+.nexus-sidebar-item:hover .nexus-sidebar-delete-btn,
+.nexus-sidebar-item.active-chat-item .nexus-sidebar-delete-btn {
+    opacity: 0.6;
+}
+
+.nexus-sidebar-delete-btn:hover {
+    opacity: 1 !important;
+    background: rgba(147, 0, 10, 0.2); /* faint translucent error background container */
+    color: #ffb4ab; /* theme error tone text rendering */
+}
+
+.delete-icon {
+    font-size: 16px !important;
+}

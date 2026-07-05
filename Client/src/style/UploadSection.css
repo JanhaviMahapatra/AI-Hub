@@ -1,0 +1,143 @@
+/* --- Layout Frame Panel --- */
+.nexus-upload-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Typography Section Headers --- */
+.nexus-upload-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd; /* text-on-surface */
+    margin: 0;
+}
+
+/* --- Glassmorphic Dropzone Wrapper --- */
+.nexus-dropzone-box {
+    background: rgba(23, 31, 51, 0.4); /* surface-container base layer background */
+    border: 2px dashed rgba(149, 142, 160, 0.4); /* dashed outline-variant */
+    border-radius: 12px;
+    padding: 32px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-dropzone-box:hover {
+    border-color: #44e2cd; /* transforms into bright secondary teal */
+    background: rgba(23, 31, 51, 0.6);
+}
+
+.dropzone-icon {
+    font-size: 36px !important;
+    color: #44e2cd; /* secondary identity tint */
+}
+
+.nexus-dropzone-label {
+    background: #2d3449; /* surface-variant base overlay */
+    color: #dae2fd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.nexus-dropzone-label:hover {
+    background: #31394d;
+}
+
+.nexus-hidden-input {
+    display: none; /* Masks default clunky generic browser input layouts */
+}
+
+.dropzone-subtext {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(203, 195, 215, 0.45); /* surface variant labels */
+    margin: 0;
+}
+
+/* --- File Selected Status Badge --- */
+.nexus-file-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    background: rgba(139, 92, 246, 0.1); /* transparent context matching primary-container */
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    padding: 8px 14px;
+    border-radius: 8px;
+    color: #d0bcff; /* primary-fixed-dim highlight */
+    font-size: 14px;
+}
+
+.file-badge-icon {
+    font-size: 18px !important;
+}
+
+.file-badge-text strong {
+    color: #dae2fd;
+}
+
+/* --- Action Triggers and Submits --- */
+.nexus-upload-action-btn {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #a078ff; /* primary-container background color */
+    color: #23005c; /* on-primary-container contrast */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-upload-action-btn:hover:not(:disabled) {
+    opacity: 0.95;
+    box-shadow: 0 4px 15px -4px rgba(160, 120, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.nexus-upload-action-btn:disabled {
+    background: #2d3449;
+    color: rgba(218, 226, 253, 0.3);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Micro-animations --- */
+.spin-icon {
+    animation: nexusUploadSpin 1.5s linear infinite;
+    font-size: 16px !important;
+}
+
+@keyframes nexusUploadSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* --- Horizontal Divider Rules --- */
+.nexus-upload-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.25); /* outline-variant contextual bounds separator */
+    margin: 40px 0;
+}

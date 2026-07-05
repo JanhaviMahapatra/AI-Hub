@@ -1,0 +1,72 @@
+:root {
+    --bg-surface: #0b1326;
+    --text-on-surface: #dae2fd;
+    --color-primary: #d0bcff;
+    --color-secondary: #44e2cd;
+    --space-lg: 32px;
+    --gutter: 16px;
+}
+
+body {
+    background-color: var(--bg-surface);
+    color: var(--text-on-surface);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.nexus-workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-lg);
+    padding: 128px var(--gutter) 48px var(--gutter);
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.tool-card-hover {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tool-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.3);
+    border-color: #8B5CF6;
+}
+
+.nexus-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1; 
+}
+
+.nexus-glow-left {
+    top: 80px;
+    left: -80px;
+    width: 384px;
+    height: 384px;
+    background: rgba(208, 188, 255, 0.1); 
+    filter: blur(120px);
+}
+
+.nexus-glow-right {
+    bottom: 160px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: rgba(68, 226, 205, 0.05); 
+    filter: blur(150px);
+}

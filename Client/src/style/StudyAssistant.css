@@ -1,0 +1,142 @@
+/* --- Main Structural Layout Frame --- */
+.nexus-assistant-layout {
+    max-width: 1000px;
+    margin: 80px auto 40px auto; /* Offsets the fixed header navbar height precisely */
+    padding: 48px 24px; /* Matches xl bottom and container margin ratios */
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Atmospheric Background Glow Modules --- */
+.nexus-ambient-glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1; /* Layer safely underneath form modules */
+}
+
+.nexus-glow-left {
+    top: 40px;
+    left: -120px;
+    width: 384px;
+    height: 384px;
+    background: rgba(208, 188, 255, 0.08); /* Transparent primary accent */
+    filter: blur(120px);
+}
+
+.nexus-glow-right {
+    bottom: 80px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background: rgba(68, 226, 205, 0.04); /* Transparent secondary accent */
+    filter: blur(150px);
+}
+
+/* --- Typography Page Headers --- */
+.nexus-assistant-header {
+    margin-bottom: 40px;
+}
+
+.nexus-assistant-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    background: linear-gradient(to right, #dae2fd, #cbc3d7);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.nexus-assistant-subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    color: #cbc3d7; /* on-surface-variant */
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* --- Container Deck for Workflow Elements --- */
+.nexus-assistant-workspace-deck {
+    background: rgba(23, 31, 51, 0.25); /* surface-container-low subtle card matrix */
+    border: 1px solid rgba(73, 68, 84, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 32px -16px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Actions Execution Strip --- */
+.nexus-action-strip {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.nexus-generate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #03c6b2; /* secondary-container base brand token */
+    color: #003731; /* on-secondary text contrast */
+    border: none;
+    border-radius: 8px;
+    padding: 14px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(3, 198, 178, 0.15);
+}
+
+.nexus-generate-btn:hover:not(:disabled) {
+    background: #44e2cd; /* Transitions straight into active secondary bright */
+    box-shadow: 0 6px 20px -4px rgba(68, 226, 205, 0.4);
+    transform: translateY(-1px);
+}
+
+.nexus-generate-btn:active:not(:disabled) {
+    transform: translateY(1px);
+    scale: 0.98;
+}
+
+/* Disabled & Active Processing States */
+.nexus-generate-btn:disabled {
+    background: #2d3449; /* surface-variant frame overlay */
+    color: rgba(218, 226, 253, 0.3);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.nexus-generate-btn.is-loading {
+    background: #a078ff !important; /* primary-container text color swap dynamic framework */
+    color: #23005c !important;
+}
+
+.btn-arrow {
+    font-size: 16px !important;
+    transition: transform 0.2s ease;
+}
+
+.nexus-generate-btn:hover:not(:disabled) .btn-arrow {
+    transform: scale(1.15);
+}
+
+/* Processing Vector Spinnings */
+.spin-icon {
+    animation: nexusPipelineSpin 1.5s linear infinite;
+    font-size: 16px !important;
+}
+
+@keyframes nexusPipelineSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

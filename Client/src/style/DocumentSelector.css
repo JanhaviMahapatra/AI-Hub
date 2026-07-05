@@ -1,0 +1,123 @@
+/* --- Component Typography Headers --- */
+.nexus-study-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dae2fd; /* text-on-surface */
+    margin: 0 0 20px 0;
+}
+
+/* --- Empty Fallback Display Panel --- */
+.nexus-study-empty-state {
+    padding: 32px;
+    background: rgba(23, 31, 51, 0.3); /* surface-container base tint */
+    border: 1px dashed rgba(149, 142, 160, 0.4); /* outline-variant frame wrapper */
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #cbc3d7; /* on-surface-variant */
+    font-size: 14px;
+    opacity: 0.7;
+    margin-top: 16px;
+}
+
+/* --- Structured Content Presentation Grids --- */
+.nexus-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+    box-sizing: border-box;
+}
+
+/* --- Individual Dynamic Card Blocks --- */
+.nexus-study-card {
+    background: rgba(30, 41, 59, 0.6); /* glass-card foundation element overlay */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-study-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(139, 92, 246, 0.6); /* Translucent primary violet tracking on base hover */
+    box-shadow: 0 8px 24px -10px rgba(139, 92, 246, 0.25);
+}
+
+/* Selected Focus State Modifications */
+.nexus-study-card.is-selected {
+    border-color: #44e2cd; /* secondary highlighting color frame shifts */
+    background: rgba(3, 198, 178, 0.08); /* faint secondary-container container overlay mix */
+    box-shadow: 0 10px 30px -10px rgba(68, 226, 205, 0.25);
+}
+
+/* --- Document Core Graphic Layout Units --- */
+.nexus-study-icon-wrapper {
+    margin-bottom: 14px;
+    display: inline-flex;
+}
+
+.document-card-icon {
+    font-size: 32px !important;
+    color: #cbc3d7; /* muted base state fallback color */
+    transition: color 0.2s ease;
+}
+
+.is-selected .document-card-icon {
+    color: #44e2cd; /* shifts target asset element straight to bright secondary teal */
+}
+
+/* --- Textual Labels Parameters Systems --- */
+.nexus-study-filename {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #dae2fd;
+    margin: 0;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+.nexus-study-meta-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    color: #cbc3d7;
+    margin: 6px 0 0 0;
+    opacity: 0.7;
+}
+
+/* --- Active Verification Diagnostic Badge Layouts --- */
+.nexus-study-selected-badge {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #44e2cd;
+}
+
+.check-icon {
+    font-size: 14px !important;
+}
+
+/* --- Separator Rule Bounds Elements --- */
+.nexus-study-divider {
+    border: none;
+    height: 1px;
+    background: rgba(73, 68, 84, 0.25); /* outline-variant horizontal break trace rules */
+    margin: 40px 0;
+}

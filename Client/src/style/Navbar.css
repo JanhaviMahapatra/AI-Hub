@@ -1,0 +1,153 @@
+/* --- Global Fixed Structural Navigation Layer --- */
+/* --- Brand Logo Properties Array --- */
+.nexus-nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    
+    /* Premium platform design color signature */
+    background: linear-gradient(to right, #d0bcff, #44e2cd); 
+    
+    /* Cross-Browser Vendor Prefix Compatibility Fixes */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+.nexus-nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1280px; /* max-w-7xl constraint equivalence */
+    margin: 0 auto;
+    padding: 0 24px; /* matching container-margin scale spacing */
+    box-sizing: border-box;
+}
+
+/* --- Brand Logo With Vendor Prefixes --- */
+.nexus-nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    
+    background: linear-gradient(to right, #d0bcff, #44e2cd); /* primary to secondary gradient link */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/* --- User Logged-In Block Elements --- */
+.nexus-nav-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* md layout gaps system spacing */
+}
+
+.nexus-nav-welcome {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    color: #cbc3d7; /* muted on-surface-variant */
+}
+
+.user-highlight {
+    color: #dae2fd; /* bright high emphasis text-on-surface */
+    font-weight: 600;
+}
+
+.nexus-nav-profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #cbc3d7;
+    transition: color 0.2s ease;
+}
+
+.nexus-nav-profile-link:hover {
+    color: #d0bcff; /* updates to primary tint on target hover interaction state */
+}
+
+.nexus-nav-logout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffb4ab; /* theme error tone text rendering */
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nexus-nav-logout-btn:hover {
+    background: rgba(147, 0, 10, 0.15); /* light contextual trace overlay error block background */
+}
+
+.nav-icon {
+    font-size: 18px !important;
+}
+
+/* --- Guest Auth Actions Structure --- */
+.nexus-nav-guest-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nexus-nav-link-secondary {
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #cbc3d7;
+    padding: 10px 20px;
+    transition: color 0.2s ease;
+}
+
+.nexus-nav-link-secondary:hover {
+    color: #dae2fd;
+}
+
+.nexus-nav-link-primary {
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #03c6b2; /* secondary-container base color style token */
+    color: #003731; /* strong contrast on-secondary container text tint */
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nexus-nav-link-primary:hover {
+    background: #44e2cd; /* transforms into bright secondary highlight variant */
+    box-shadow: 0 4px 15px -4px rgba(68, 226, 205, 0.4);
+    transform: translateY(-1px);
+}
+
+.nexus-nav-link-primary:active {
+    transform: translateY(1px);
+}
