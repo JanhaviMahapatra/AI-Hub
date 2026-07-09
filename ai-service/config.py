@@ -10,22 +10,28 @@ MODEL = os.getenv("MODEL")
 
 # Web Search Configuration
 
+
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+
 
 # Embedding Configuration
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+
+JINA_API_KEY = os.getenv("JINA_API_KEY")
+
 
 # Chunking Configuration
+
 
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
 
 # ChromaDB Configuration
 
+
 CHROMA_DB_PATH = os.getenv(
     "CHROMA_DB_PATH",
-    "./chroma_db",
+    "/data/chroma_db",
 )
 
 COLLECTION_NAME = "documents"

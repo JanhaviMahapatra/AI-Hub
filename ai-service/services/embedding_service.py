@@ -1,35 +1,51 @@
-from sentence_transformers import SentenceTransformer
-from config import EMBEDDING_MODEL
+import requests
 
-_embedding_model = None
-
-
-def get_embedding_model():
-    global _embedding_model
-
-    if _embedding_model is None:
-        _embedding_model = SentenceTransformer(EMBEDDING_MODEL)
-
-    return _embedding_model
+from config import JINA_API_KEY
 
 
-def create_embedding(text: str):
-    model = get_embedding_model()
+JINA_EMBEDDING_URL = "https://api.jina.ai/v1/embeddings"
 
-    embedding = model.encode(
-        text,
-        normalize_embeddings=True,
+HEADERS = {
+    "Authorization": f"Bearer {JINA_API_KEY}",
+    "Content-Type": "application/json",
+}
+
+
+def create_embedding(text: str) -> list[float]:
+    response = requests.post(
+        JINA_EMBEDDING_URL,
+        headers=HEADERS,
+        json={
+            "model": "jina-embeddings-v3",
+            "input": [text],
+        },
+        timeout=60,
     )
 
-    return embedding.tolist()
+    response.raise_for_status()
+
+    data = response.json()
+
+    return data["data"][0]["embedding"]
 
 
-def create_embeddings(texts):
-    model = get_embedding_model()
-
-    embeddings = model.encode(
-        texts,
-        normalize_embeddings=True,
+def create_embeddings(texts: list[str]) -> list[list[float]]:
+    response = requests.post(
+        JINA_EMBEDDING_URL,
+        headers=HEADERS,
+        json={
+            "model": "jina-embeddings-v3",
+            "input": texts,
+        },
+        timeout=120,
     )
 
-    return embeddings.tolist()
+    response.raise_for_status()
+
+    data = response.json()
+
+    return [
+        item["embedding"]
+        for item in data["data"]
+    ]
+}
