@@ -27,11 +27,9 @@ CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200
 
 # ChromaDB Configuration
-
-
 CHROMA_DB_PATH = os.getenv(
     "CHROMA_DB_PATH",
-    "/data/chroma_db",
+    "/tmp/chroma_db",
 )
 
 COLLECTION_NAME = "documents"
