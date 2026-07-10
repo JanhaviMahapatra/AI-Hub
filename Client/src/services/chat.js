@@ -22,7 +22,7 @@ export const deleteChat = async (id) => {
  */
 export const streamMessage = async (id, message, token) => {
     const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/chat/${id}/message`,
+        `${import.meta.env.VITE_API_URL}/api/chat/${id}/message`,
         {
             method: "POST",
             headers: {
